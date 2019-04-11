@@ -342,41 +342,21 @@
         <h3>Как добраться?</h3>
         <p>Проще, чем ты думаешь!</p>
     </div>
-    <div id="map-canvas"></div>
-    <div id="map-content-wrapper" class="container pointer-events-none">
-        <div class="row">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-                <div class="text-center">
-                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
-                    </div>
-                </div>
-                <div id="map-content" class="pointer-events-auto">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Резеденция SAGITTARIUS</h5>
-                            <p>Березовая 14/7, Садовый, Новосибирск, Россия</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5> Координатор - Ирина Михалева</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+79133791299">+7 9133791299</a><br>
-                                <!--<i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a>-->
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277">
-                               </i class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
-                        </div>
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show map</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div class="text-center">
+        <div class="ya-taxi-widget" data-use-location="true" data-size="m" data-title="" data-point-a="" data-point-b="82.968597,55.126215" data-ref="https%3A%2F%2Fdnalchemist.github.io" data-theme="normal"
+            data-proxy-url="https://3.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&amp;start-lon={start-lon}&amp;end-lat={end-lat}&amp;end-lon={end-lon}&amp;ref={ref}&amp;appmetrica_tracking_id=1178268795219780156">
         </div>
+    </div>
+    <div class="text-center">
+        <h5>Резеденция SAGITTARIUS</h5>
+        <p>Россия, Новосибирская область, Садовый, ул. Березовая 14/7</p>
+    </div>
+    <div class="text-center">
+        <h5> Координатор - Ирина Михалева</h5>
+        <p>
+            <i class="fa fa-mobile"></i> <a href="tel://+79133791299">+7 9133791299</a><br>
+        </p>
     </div>
 </section>
 
@@ -463,6 +443,7 @@
     </div>
 </footer>
 
+<script src="//yastatic.net/taxi-widget/ya-taxi-widget.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 <script src="js/jquery.fancybox.pack.js"></script>

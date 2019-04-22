@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    var code = new URLSearchParams(window.location.search).get("code");
+    if (!code) {
+        code = window.location.pathname.substr(1, window.location.pathname.length);
+    }
+    
+    if (code) {
+        $('#invite_code').val(code);
+    }
+
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {

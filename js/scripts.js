@@ -6,6 +6,11 @@ $(document).ready(function () {
             code = window.location.pathname.substr(1, window.location.pathname.length);
         }
         $('#invite_code').val(code);
+        fillByCode(code);
+    });
+
+    $("#invite_code").change(function() {
+        fillByCode($(this).val());
     });
     /***************** Waypoints ******************/
 
@@ -271,6 +276,13 @@ function initBBSRMap() {
     });
 }
 
+function fillByCode(code) {
+    $.getJSON("/api/guests/" + code, {}, function(data) {
+        $('#name').val(data.name);
+        $('#email').val(data.email);
+        $('#extras').val(data.plus);
+    });
+}
 // alert_markup
 function alert_markup(alert_type, msg) {
     return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>';

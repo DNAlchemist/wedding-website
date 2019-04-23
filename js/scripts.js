@@ -283,9 +283,15 @@ function fillByCode(code) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.extras);
-        $('#register-fill').removeClass("btn-fill");
-        $('#register-fill').addClass("btn-success");
-        $('#register-fill').html("ОБНОВИТЬ МОИ ДАННЫЕ!");
+        if(data.approved == true) {
+            $('#register-fill').removeClass("btn-fill");
+            $('#register-fill').addClass("btn-success");
+            $('#register-fill').html("ОБНОВИТЬ МОИ ДАННЫЕ!");
+        } else {
+            $('#register-fill').addClass("btn-fill");
+            $('#register-fill').removeClass("btn-success");
+            $('#register-fill').html("ВОТ И Я!");
+        }
     }).complete(function(s) {
         if (s.status == 404) {
             $('#register-fill').addClass("btn-fill");

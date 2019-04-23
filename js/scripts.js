@@ -281,12 +281,14 @@ function fillByCode(code) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.plus);
-        $('#register-success').removeClass("invisible");
-        $('#register-fill').addClass("invisible");
+        $('#register-fill').removeClass("btn-fill");
+        $('#register-fill').addClass("btn-success");
+        $('#register-fill').html("Вот и я!");
     }).complete(function(s) {
         if (complete.status == 404) {
-            $('#register-success').addClass("invisible");
-            $('#register-fill').removeClass("invisible");
+            $('#register-fill').addClass("btn-fill");
+            $('#register-fill').removeClass("btn-success");
+            $('#register-fill').html("Обновить данные!");
         }
     });
 }

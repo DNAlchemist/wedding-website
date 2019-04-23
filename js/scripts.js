@@ -287,6 +287,7 @@ function fillByCode(code) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.extras);
+        $('#phone').val(data.phone);
         if(data.approved == true) {
             $('#register-fill').removeClass("btn-fill");
             $('#register-fill').addClass("btn-success");

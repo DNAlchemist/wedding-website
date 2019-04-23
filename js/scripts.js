@@ -5,8 +5,14 @@ $(document).ready(function () {
         if (!code) {
             code = window.location.pathname.substr(1, window.location.pathname.length);
         }
-        $('#invite_code').val(code);
-        fillByCode(code);
+        if (code) {
+            $('#invite_code').val(code);
+            fillByCode(code);
+        } else {
+            $('#register-fill').addClass("btn-fill");
+            $('#register-fill').removeClass("btn-success");
+            $('#register-fill').html("Вот и я!");
+        }
     });
 
     $("#invite_code").keyup(function() {

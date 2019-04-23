@@ -9,7 +9,7 @@ $(document).ready(function () {
         fillByCode(code);
     });
 
-    $("#invite_code").change(function() {
+    $("#invite_code").keypress(function() {
         fillByCode($(this).val());
     });
     /***************** Waypoints ******************/

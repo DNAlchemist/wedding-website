@@ -286,7 +286,7 @@ function fillByCode(code) {
     $.getJSON("/api/guests/" + code, {}, function(data) {
         $('#name').val(data.name);
         $('#email').val(data.email);
-        $('#extras').val(data.plus);
+        $('#extras').val(data.extras);
         $('#register-fill').removeClass("btn-fill");
         $('#register-fill').addClass("btn-success");
         $('#register-fill').html("ОБНОВИТЬ МОИ ДАННЫЕ!");

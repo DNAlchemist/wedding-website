@@ -281,12 +281,12 @@ function fillByCode(code) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.plus);
-        $('#register-success').visible(true);
-        $('#register-fill').visible(false);
+        $('#register-success').removeClass("invisible");
+        $('#register-fill').addClass("invisible");
     }).complete(function(s) {
         if (complete.status == 404) {
-            $('#register-success').visible(false);
-            $('#register-fill').visible(true);
+            $('#register-success').addClass("invisible");
+            $('#register-fill').removeClass("invisible");
         }
     });
 }

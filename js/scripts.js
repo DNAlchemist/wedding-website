@@ -283,12 +283,12 @@ function fillByCode(code) {
         $('#extras').val(data.plus);
         $('#register-fill').removeClass("btn-fill");
         $('#register-fill').addClass("btn-success");
-        $('#register-fill').html("Вот и я!");
+        $('#register-fill').html("Обновить мои данные!");
     }).complete(function(s) {
-        if (complete.status == 404) {
+        if (s.status == 404) {
             $('#register-fill').addClass("btn-fill");
             $('#register-fill').removeClass("btn-success");
-            $('#register-fill').html("Обновить данные!");
+            $('#register-fill').html("Вот и я!");
         }
     });
 }

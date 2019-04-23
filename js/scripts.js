@@ -281,6 +281,13 @@ function fillByCode(code) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.plus);
+        $('#register-success').visible(true);
+        $('#register-fill').visible(false);
+    }).complete(function(s) {
+        if (complete.status == 404) {
+            $('#register-success').visible(false);
+            $('#register-fill').visible(true);
+        }
     });
 }
 // alert_markup

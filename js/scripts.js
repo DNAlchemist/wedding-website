@@ -233,10 +233,14 @@ $(document).ready(function () {
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         $.post('guests/meet', data)
-            .done(function (data) {
-                console.log(data);
-                $('#alert-wrapper').html('');
-                $('#rsvp-modal').modal('show');
+            .done(function (data, status) {
+                if (status == 200) {
+                    console.log(data);
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                } else {
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Извините!</strong> Введенный код неверен. '));
+                }
             })
             .fail(function (data) {
                 console.log(data);

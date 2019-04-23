@@ -11,7 +11,7 @@ $(document).ready(function () {
         } else {
             $('#register-fill').addClass("btn-fill");
             $('#register-fill').removeClass("btn-success");
-            $('#register-fill').html("Вот и я!");
+            $('#register-fill').html("ВОТ И Я!");
         }
     });
 
@@ -289,12 +289,12 @@ function fillByCode(code) {
         $('#extras').val(data.plus);
         $('#register-fill').removeClass("btn-fill");
         $('#register-fill').addClass("btn-success");
-        $('#register-fill').html("Обновить мои данные!");
+        $('#register-fill').html("ОБНОВИТЬ МОИ ДАННЫЕ!");
     }).complete(function(s) {
         if (s.status == 404) {
             $('#register-fill').addClass("btn-fill");
             $('#register-fill').removeClass("btn-success");
-            $('#register-fill').html("Вот и я!");
+            $('#register-fill').html("ВОТ И Я!");
         }
     });
 }

@@ -236,6 +236,11 @@ $(document).ready(function () {
             .done(function (data, status) {
                 if (status == "success") {
                     console.log(data);
+
+                    $('#register-fill').removeClass("btn-fill");
+                    $('#register-fill').addClass("btn-success");
+                    $('#register-fill').html("ОБНОВИТЬ МОИ ДАННЫЕ!");
+
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
                 } else {

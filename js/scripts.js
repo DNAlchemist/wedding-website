@@ -234,7 +234,7 @@ $(document).ready(function () {
 
         $.post('guests/meet', data)
             .done(function (data, status) {
-                if (status == 200) {
+                if (status == "success") {
                     console.log(data);
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');

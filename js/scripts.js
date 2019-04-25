@@ -204,7 +204,7 @@ $(document).ready(function () {
             title: "Свадьба Руслана и Анастасии",
 
             // Event start date
-            start: new Date('Jul 20, 2019 10:00'),
+            start: new Date('Jul 20, 2019 11:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,

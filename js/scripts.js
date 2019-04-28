@@ -292,6 +292,7 @@ function fillByCode(code) {
         $('#email').val(data.email);
         // $('#extras').val(data.extras);
         $('#phone').val(data.phone);
+        $('#greeting').html(data.greeting);
         if(data.approved == true) {
             $('#register-fill').removeClass("btn-fill");
             $('#register-fill').addClass("btn-success");

@@ -258,7 +258,7 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 function fillByCode(code) {
-    $.getJSON("/api/guests/" + code, {}, function(data) {
+    $.getJSON("/guests/" + code, {}, function(data) {
         $('#name').val(data.name);
         $('#email').val(data.email);
         $('#extras').val(data.extras);
